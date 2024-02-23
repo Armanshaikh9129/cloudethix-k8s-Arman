@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: release
+spec:
+  selector:
+    matchLabels:
+      app: release
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: release
+    spec:
+      containers:
+      - name: my-release
+        image: armansk9129/cloudethix_release_nginx_arman:v1
+        ports:
+        - containerPort: 8080
+

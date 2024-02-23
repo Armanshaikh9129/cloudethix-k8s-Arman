@@ -1,0 +1,33 @@
+root@DESKTOP-0ANCI6F:~/kubectx (master)# ll
+total 140
+drwxr-xr-x 10 root root  4096 Feb 21 19:05 ./
+drwx------ 46 root root  4096 Feb 21 19:05 ../
+drwxr-xr-x  8 root root  4096 Feb 21 19:05 .git/
+drwxr-xr-x  3 root root  4096 Feb 21 19:05 .github/
+-rw-r--r--  1 root root  2761 Feb 21 19:05 .goreleaser.yml
+drwxr-xr-x  2 root root  4096 Feb 21 19:05 .krew/
+-rw-r--r--  1 root root   968 Feb 21 19:05 CONTRIBUTING.md
+-rw-r--r--  1 root root 11357 Feb 21 19:05 LICENSE
+-rw-r--r--  1 root root 10093 Feb 21 19:05 README.md
+drwxr-xr-x  4 root root  4096 Feb 21 19:05 cmd/
+drwxr-xr-x  2 root root  4096 Feb 21 19:05 completion/
+-rw-r--r--  1 root root  2169 Feb 21 19:05 go.mod
+-rw-r--r--  1 root root 48940 Feb 21 19:05 go.sum
+drwxr-xr-x  2 root root  4096 Feb 21 19:05 img/
+drwxr-xr-x  7 root root  4096 Feb 21 19:05 internal/
+-rwxr-xr-x  1 root root  6108 Feb 21 19:05 kubectx*
+-rwxr-xr-x  1 root root  5555 Feb 21 19:05 kubens*
+drwxr-xr-x  3 root root  4096 Feb 21 19:05 test/
+root@DESKTOP-0ANCI6F:~/kubectx (master)# mv kubectx kubens /usr/local/bin
+root@DESKTOP-0ANCI6F:~/kubectx (master)# kubens
+Command 'kubens' is available in '/usr/local/bin/kubens'
+The command could not be located because '/usr/local/bin' is not included in the PATH environment variable.
+kubens: command not found
+root@DESKTOP-0ANCI6F:~/kubectx (master)# export PATH=/usr/local/bin:$PATH
+root@DESKTOP-0ANCI6F:~/kubectx (master)# kubens
+default
+kube-node-lease
+kube-public
+kube-system
+root@DESKTOP-0ANCI6F:~/kubectx (master)# kubectl
+kubectl controls the Kubernetes cluster manager.
